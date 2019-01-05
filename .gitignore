@@ -1,0 +1,13 @@
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+*.contentful
+
+# Build directory
+/public
+.DS_Store
+.svgr.json
+
+# Extras
+*.code-workspace
