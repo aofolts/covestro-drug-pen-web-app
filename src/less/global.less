@@ -12,57 +12,18 @@
 }
 
 ////////////////////////////////////////////////////////
-// BODY
-////////////////////////////////////////////////////////
-
-:root {
-  --headerDockedHeight: .padding[large];
-}
-
-////////////////////////////////////////////////////////
-// CARDS
-////////////////////////////////////////////////////////
-
-.card() {
-  .headline() {
-    font-size: .paragraph[font-size];
-    font-weight: .paragraph.bold[font-weight];
-  }
-}
-
-@cardHover: {
-  transform: scale(1.01);
-}
-
-////////////////////////////////////////////////////////
 // COLORS
 ////////////////////////////////////////////////////////
 
 .color() {
-  primary: #35D49D;
-  accent: #465C96;
-  green: #35D49D;
-  blue: #465C96;
-  black: #333;
-
-  .primary() {
-    darker: #228760;
-    dark: #28A072;
-    darken: #2FBA85;
-    default: #34d49d;
-    light: #80EDBF;
-    lightest: #daefe6;
-  }
+  blue: #00aeef;
+  green: #15b68d;
+  pink: #ed028c;
+  orange: #f48232;
 
   .grey() {
-    darkest: #222222;
-    darker: #262626;
-    default: #BFBFBF;
-    medium: #BFBFBF;
-    lighten: #cccccc;
-    light: #D8D8D8;
-    lighter: #E8E8E8;
-    lightest: #f7f7f7;
+    light: #f2f3f4;
+    dark: #3e3e3f;
   }
 }
 
@@ -75,227 +36,6 @@ html {
 
   @media .query.phone[default] {
     --paddingVertical: 5rem;
-  }
-}
-
-////////////////////////////////////////////////////////
-// DIVIDERS
-////////////////////////////////////////////////////////
-
-.rule(
-  @orientation: horizontal,
-  @margin: .padding[large] auto,
-  @length: .padding[large]
-) {
-  content: '';
-  height: .border.weight[default];
-  background: .color.grey[lighter];
-  margin: @margin;
-  display: block;
-  width: @length;
-}
-
-////////////////////////////////////////////////////////
-// EASING
-////////////////////////////////////////////////////////
-
-.ease() {
-  cubic: cubic-bezier(0,.5,.5,1);
-}
-
-////////////////////////////////////////////////////////
-// FONT FAMILIES
-////////////////////////////////////////////////////////
-
-@import (css) url("//hello.myfonts.net/count/37f9b2");
-
-  
-@font-face {
-  font-family: 'True North';
-  src: url('../fonts/37F9B2_0_0.eot');
-  src: url('../fonts/37F9B2_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts//37F9B2_0_0.woff2') format('woff2'),url('../fonts//37F9B2_0_0.woff') format('woff'),url('../fonts//37F9B2_0_0.ttf') format('truetype');
-}
-
-////////////////////////////////////////////////////////
-// GRID
-////////////////////////////////////////////////////////
-
-.grid() {
-  columnWidth: .padding[large];
-  grid-gap: .padding[medium];
-
-  .halves() {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(50rem,1fr));
-    .grid;
-  }
-
-  .thirds() {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
-    .grid;
-  }
-}
-
-.thirdsGrid {
-  display: flex;
-  grid-gap: .padding[medium];
-
-  @media .query.phone[above] {
-    grid-template-columns: repeat(30rem,minmax(35rem,1fr));
-  }
-
-  @media .query.phone[default] {
-    grid-template-columns: 1fr;
-  }
-
-  @supports not (display: grid) {
-    @media .query.phone[above] {
-      display: flex;
-    }
-
-    @media .query.phone[default] {
-      display: block;
-    }
-  }
-}
-
-.halvesGrid {
-  display: grid;
-  grid-gap: .padding[medium];
-
-  @media .query.phone[above] {
-    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
-  }
-
-  @media .query.phone[default] {
-    grid-template-columns: 1fr;
-  }
-
-  @supports not (display: grid) {
-    @media .query.phone[above] {
-      display: flex;
-    }
-  }
-}
-
-////////////////////////////////////////////////////////
-// HEADINGS
-////////////////////////////////////////////////////////
-
-.heading {
-  color: .color.grey[darkest];
-
-  .primary() {
-    font-family: 'True North',sans-serif;
-    font-size: 6.8rem;
-    font-weight: 500;
-    line-height: 1.2em;
-    margin-bottom: .padding[medium];
-
-    @media .query.phone[default] {
-      font-size: .heading.secondary[font-size] * 1.1;
-    }
-  }
-
-  .secondary() {
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.2em;
-
-    u {
-      text-decoration: none;
-      position: relative;
-
-      &:after {
-        content: '';
-        width: 100%;
-        top: calc(100% ~'-' .42em);
-        left: 0;
-        height: .27em;
-        background: .color.primary[light];
-        position: absolute;
-        z-index: -1;
-      }
-    }
-
-    i,em {
-      font-weight: .paragraph.bold[font-weight];
-    }
-  }
-
-  .subTitle() {
-    color: .color[primary];
-    font-size: .paragraph.tertiary[font-size];
-    font-weight: 700;
-    text-transform: uppercase;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin-bottom: 0;
-    text-decoration: underline;
-  }
-
-  .tertiary() {
-    font-size: 2.8rem;
-    font-weight: 500;
-    margin-bottom: .5em;
-  }
-
-  .mini() {
-    font-size: .paragraph.secondary[font-size];
-    font-weight: .paragraph.bold[font-weight];
-    margin-bottom: .25em;
-  }
-}
-
-h1 {
-  .heading.primary;
-}
-
-h2 {
-  .heading.secondary;
-}
-
-h3 {
-  .heading.tertiary;
-}
-
-h5 {
-  .heading.mini;
-}
-
-////////////////////////////////////////////////////////
-// KERNING
-////////////////////////////////////////////////////////
-
-.kerning() {
-  wide: .05em;
-}
-
-////////////////////////////////////////////////////////
-// LISTS
-////////////////////////////////////////////////////////
-
-.list() {
-  font-size: .paragraph.secondary[font-size];
-  margin-bottom: .paragraph[line-height];
-
-  .item() {
-    margin-left: 2em;
-    margin-bottom: .33em;
-  }
-
-  li {
-    .list.item;
-  }
-
-  .ordered() {
-    .list;
-  }
-
-  .unordered() {
-    .list;
-    list-style-type: disc;  
   }
 }
 
@@ -330,80 +70,7 @@ body {
   }
 }
 
-////////////////////////////////////////////////////////
-// PARAGRAPHS
-////////////////////////////////////////////////////////
 
-.paragraph() {
-  font-size: 2.4rem;
-  font-weight: 300;
-  font-family: 'sofia-pro',sans-serif;
-  line-height: 1.4em;
-  margin-bottom: 1em;
-  color: .color.grey[darker];
-  letter-spacing: .01em;
-
-  .bold() {
-    font-weight: 400;
-  }
-
-  .italic() {
-    font-style: italic;
-  }
-
-  .link() {
-    color: .color.primary[darken];
-    text-decoration: underline;
-    cursor: pointer;
-
-    &:hover {
-      font-style: italic;
-    }
-  }
-
-  .secondary() {
-    font-size: 2.2rem;
-    margin-bottom: .paragraph[margin-bottom];
-    color: .color.grey[darker];
-  }
-
-  .tertiary() {
-    font-size: 2rem;
-    margin-bottom: .paragraph[margin-bottom];
-  }
-}
-
-p a {
-  .paragraph.link;
-}
-
-p {
-  .paragraph;
-}
-
-.p2 {
-  .paragraph.secondary;
-}
-
-p,.p2 {
-  b,strong {
-    .paragraph.bold;
-  }
-}
-
-p,.p2 {
-  i,em {
-    .paragraph.italic;
-  }
-}
-
-body {
-  color: .paragraph[color];
-  font-family: .paragraph[font-family];
-  font-weight: .paragraph[font-weight];
-  line-height: .paragraph[line-height];
-  font-size: .paragraph[font-size];
-}
 
 ////////////////////////////////////////////////////////
 // MEDIA
@@ -416,6 +83,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  // Fix for gatsby-image styling
+  position: absolute !important;
 };
 
 .mediaBackground {
@@ -484,6 +153,15 @@ body {
 @goldenRatio: 1.618;
 
 ////////////////////////////////////////////////////////
+// PARAGRAPH
+////////////////////////////////////////////////////////
+
+html {
+  color: .color.grey[dark];
+  font-family: 'Arial',sans-serif;
+}
+
+////////////////////////////////////////////////////////
 // REM SIZES
 ////////////////////////////////////////////////////////
 
@@ -506,22 +184,3 @@ body {
     font-size: 8px;
   }
 }
-
-////////////////////////////////////////////////////////
-// MEDIA
-////////////////////////////////////////////////////////
-
-.mediaBackground {
-  position: absolute !important;
-}
-
-////////////////////////////////////////////////////////
-// QUOTES
-////////////////////////////////////////////////////////
-
-@pullQuote: {
-  font-size: .heading.tertiary;
-  font-weight: .paragraph[font-weight];
-  line-height: .paragraph[line-height];
-  margin-bottom: .padding[medium];
-};
