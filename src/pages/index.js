@@ -3,6 +3,7 @@ import css from 'less/index.module.less'
 import Nav from 'components/nav'
 import Video from 'components/video'
 import SketchfabView from 'components/view-sketchfab'
+import AccordianView from 'components/view-accordian'
 
 const data = {
   accordians: [
@@ -73,7 +74,9 @@ class Index extends React.Component {
     else if (view === 'sketchfab') {
       return <SketchfabView {...context}/>
     }
-    else return 'accordian'
+    else {
+      return <AccordianView {...context}/>
+    }
   }
 }
 

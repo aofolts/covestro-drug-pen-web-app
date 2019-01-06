@@ -1,16 +1,100 @@
 @import (reference) 'global.less';
 
+.accordian {
+  display: block;
+
+  & + .accordian {
+    margin-top: .padding[small];
+  }
+}
+
 .header {
   background: .color.grey[lightest];
   padding: .padding[small];
+  display: flex;
+  align-items: center;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-right: .padding[small];
+  font-weight: 500;
+}
+
+.blueTitle {
+  color: .color[blue];
+}
+
+.pinkTitle {
+  color: .color[pink];
+}
+
+.orangeTitle {
+  color: .color[orange];
+}
+
+.greenTitle {
+  color: .color[green];
+}
+
+.description {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.toggle {
+  width: .padding[extraSmall];
+  height: .padding[extraSmall];
+  border: solid .color.grey[dark];
+  border-width: 2px 2px 0 0;
+  transform: translateX(-50%) rotate(135deg);
+}
+
+.toggleWhenExpanded {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.blueToggle {
+  border-color: .color[blue];
+}
+
+.pinkToggle {
+  border-color: .color[pink];
+}
+
+.orangeToggle{
+  border-color: .color[orange];
+}
+
+.greenToggle {
+  border-color: .color[green];
 }
 
 .content {
   padding: .padding[small];
+  display: flex;
+  justify-content: space-between;
+}
+
+.features {
+  font-size: 1.8rem;
+  line-height: 1.5em;
 }
 
 .isCollapsed {
   .content {
     display: none;
   }
+}
+
+.media {
+  width: 30rem;
+  height: 15rem;
+  background: grey;
 }
