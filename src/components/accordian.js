@@ -31,8 +31,6 @@ class Accordian extends Component {
       setExpandedAccordianByTitle(data.title)
     }
 
-    console.log(data.description)
-
     return (
       <div className={accordianClasses}>
         <div className={css.header} onClick={handleHeaderClick}>
@@ -43,9 +41,7 @@ class Accordian extends Component {
           <div className={toggleClasses}/>
         </div>
         <div className={css.content}>
-          <div className={css.features}>
-            {data.content}
-          </div>
+          <div className={css.features}  dangerouslySetInnerHTML={{__html: data.content}}/>
           <div className={css.media}>
             {/* todo: add images */}
           </div>

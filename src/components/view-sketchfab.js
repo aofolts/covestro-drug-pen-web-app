@@ -13,7 +13,7 @@ const Viewers = ({
     const display = model.modelKey === activeModel.key ? 'block' : 'none'
 
     return (
-      <iframe key={model.modelKey} title='Sketchfab model' className={css.model} src={`https://sketchfab.com/models/${model.modelKey}/embed?autospin=0.2&amp;autostart=1`} frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true" style={{display}}/>
+      <iframe key={model.modelKey} title='Sketchfab model' className={css.model} src={`https://sketchfab.com/models/${model.modelKey}/embed?autostart=1&amp;ui_controls=0&amp;ui_infos=0`} frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true" style={{display}}/>
     )
   })
 

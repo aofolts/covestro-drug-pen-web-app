@@ -6,7 +6,8 @@ class VimeoEmbed extends Component {
   componentDidMount() {
     this.player = new Player('player', {
       id: '309980899',
-      autoplay: true
+      autoplay: true,
+      loop: true
     })
   }
 

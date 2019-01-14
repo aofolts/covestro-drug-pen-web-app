@@ -9,7 +9,9 @@ const data = {
       description: 'PC: Device Housings, internal mechanical components',
       color: 'pink',
       content: `
-        Transparency for viewing windows, indicators\nNo secondary processing for integral window\nLow friction materials for internal mechanisms.
+        Transparency for viewing windows, indicators<br/>
+        No secondary processing for integral window<br/>
+        Low friction materials for internal mechanisms.
       `
     },
     {
@@ -17,7 +19,7 @@ const data = {
       description: 'PC: Device Housings, internal mechanical components',
       color: 'blue',
       content: `
-        Tough material for better durability (than ABS)\n
+        Tough material for better durability (than ABS)<br/>
         Offers low gloss appearance
       `
     },
@@ -26,7 +28,7 @@ const data = {
       description: 'PC: Device Housings, internal mechanical components',
       color: 'green',
       content: `
-        Enhanced chemical resistance to harsh lotions\n
+        Enhanced chemical resistance to harsh lotions<br/>
         Suitable for insert molding to incorporate parts for assembly
       `
     },
