@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Andrew Folts <andrew@sherpadesign.co>",
   "dependencies": {
+    "@vimeo/player": "^2.6.7",
     "gatsby": "^2.0.64",
     "gatsby-image": "^2.0.22",
     "gatsby-link": "^2.0.7",

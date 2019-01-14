@@ -1,16 +1,28 @@
-import React from 'react'
 import css from 'less/video.module.less'
+import Player from '@vimeo/player'
+import React, {Component} from 'react'
 
-const Embed = () => {
-  return (
-    <iframe className={css.iframe} src="https://player.vimeo.com/video/308736859?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen/>
-  )
+class VimeoEmbed extends Component {
+  componentDidMount() {
+    this.player = new Player('player', {
+      id: '309980899',
+      autoplay: true
+    })
+  }
+
+  render() {
+    return (
+      <div id='player' className={css.iframe}>
+
+      </div>
+    )
+  }
 }
 
 const Video = () => {
   return (
     <div className={css.container}>
-      <Embed/>
+      <VimeoEmbed/>
     </div>
   )
 }
