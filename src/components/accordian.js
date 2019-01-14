@@ -31,12 +31,14 @@ class Accordian extends Component {
       setExpandedAccordianByTitle(data.title)
     }
 
+    console.log(data.description)
+
     return (
       <div className={accordianClasses}>
         <div className={css.header} onClick={handleHeaderClick}>
           <div className={css.headerInfo}>
             <div className={titleClasses}>{data.title}</div>
-            <div className={css.description}>{data.description}</div>
+            <div className={css.description} dangerouslySetInnerHTML={{__html: data.description}}/>
           </div>
           <div className={toggleClasses}/>
         </div>

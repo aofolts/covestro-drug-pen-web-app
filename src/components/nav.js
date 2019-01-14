@@ -15,6 +15,8 @@ const MenuItemBar = ({
 
 const Menu = ({
   setView,
+  stopLandingVideo,
+  setActiveModelByKey,
   data
 }) => {
   const allItems = [
@@ -24,7 +26,12 @@ const Menu = ({
 
   const items = allItems.map(item => {
     const handleClick = () => {
+      stopLandingVideo()
       setView(item.view)
+
+      if (item.modelKey) {
+        setActiveModelByKey(item.modelKey)
+      }
     }
 
     return (

@@ -11,18 +11,22 @@ class VimeoEmbed extends Component {
   }
 
   render() {
-    return (
-      <div id='player' className={css.iframe}>
+    if (!this.props.context.video.isPlaying === true) {
+      this.player.pause()
+    }
 
-      </div>
+    return (
+      <div id='player' className={css.iframe}/>
     )
   }
 }
 
-const Video = () => {
+const Video = ({
+  context
+}) => {
   return (
     <div className={css.container}>
-      <VimeoEmbed/>
+      <VimeoEmbed context={context}/>
     </div>
   )
 }

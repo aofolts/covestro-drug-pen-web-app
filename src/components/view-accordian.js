@@ -8,22 +8,35 @@ const data = {
       title: 'Makrolon®',
       description: 'PC: Device Housings, internal mechanical components',
       color: 'pink',
-      content: 'Transparency for viewing windows, indicators<br>No secondary processing for integral window<br>Low friction materials for internal mechanisms'
+      content: `
+        Transparency for viewing windows, indicators\nNo secondary processing for integral window\nLow friction materials for internal mechanisms.
+      `
     },
     {
       title: 'Bayblend®',
       description: 'PC: Device Housings, internal mechanical components',
-      color: 'blue'
+      color: 'blue',
+      content: `
+        Tough material for better durability (than ABS)\n
+        Offers low gloss appearance
+      `
     },
     {
       title: 'Makroblend®',
       description: 'PC: Device Housings, internal mechanical components',
-      color: 'green'
+      color: 'green',
+      content: `
+        Enhanced chemical resistance to harsh lotions\n
+        Suitable for insert molding to incorporate parts for assembly
+      `
     },
     {
       title: 'Apec®',
       description: 'HT-PC: Transparent repeat autoclavability for trays and surgical',
-      color: 'orange'
+      color: 'orange',
+      content: `
+       
+      `
     }
   ]
 }

@@ -36,19 +36,35 @@ const data = {
 }
 
 class Index extends React.Component {
-
-  constructor(props) { 
-    super(props)
-  
-    this.state = {
-      view: 'home',
-      modelKey: data.models[0].modelKey
+  state = {
+    view: 'home',
+    activeModel: {
+      key: data.models[0].modelKey
+    },
+    video: {
+      isPlaying: true
     }
+  }
+
+  setActiveModelByKey = key => {
+    this.setState({
+      activeModel: {
+        key
+      }
+    })
   }
 
   setView = view => {
     this.setState({
       view: view
+    })
+  }
+
+  stopLandingVideo = () => {
+    this.setState({
+      video: {
+        isPlaying: false
+      }
     })
   }
 
@@ -63,20 +79,20 @@ class Index extends React.Component {
       data
     }
 
-    if (view === 'home') {
-      return (
-        <div className={css.page}>
-          <Video/>
+    return (
+      <div className={css.views}>
+        <div className={css.page} style={{display: view === 'home' ? 'flex' : 'none'}}>
+          <Video context={context}/>
           <Nav {...context}/>
         </div>
-      )
-    } 
-    else if (view === 'sketchfab') {
-      return <SketchfabView {...context}/>
-    }
-    else {
-      return <AccordianView {...context}/>
-    }
+        <div style={{display: view === 'sketchfab' ? 'block' : 'none'}}>
+          <SketchfabView {...context}/>
+        </div>
+        <div style={{display: view === 'accordian' ? 'block' : 'none'}}>
+          <AccordianView {...context}/>
+        </div>
+      </div>
+    )
   }
 }
 
