@@ -6,6 +6,9 @@ class Video extends Component {
   componentDidMount() {
     const $iframe = document.querySelector('iframe#landing-video')
     this.player = new Player($iframe)
+    setTimeout(() => {
+      this.player.play().catch(error => console.log(error))
+    }, 100);
   }
 
   render() {
@@ -24,7 +27,7 @@ class Video extends Component {
     return (
       <div id='player' className={css.container}>
         <div className={css.wrap}>
-          <iframe id='landing-video' className={css.iframe} src="https://player.vimeo.com/video/235337101?autoplay=1&amp;loop=1&amp;color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style={iframeStyle}/>
+          <iframe id='landing-video' className={css.iframe} src="https://player.vimeo.com/video/235337101?autoplay=0&amp;loop=1&amp;color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay" style={iframeStyle}/>
         </div>
       </div>
     )
