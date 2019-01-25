@@ -28,7 +28,7 @@ class Video extends Component {
     return (
       <div id='player' className={css.container}>
         <div className={css.wrap}>
-          <iframe id='landing-video' className={css.iframe} src="https://player.vimeo.com/video/309980899?autoplay=1&amp;loop=1&amp;color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay" style={iframeStyle}/>
+          <iframe title='video' id='landing-video' className={css.iframe} src="https://player.vimeo.com/video/313011865?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay" style={iframeStyle}/>
         </div>
       </div>
     )

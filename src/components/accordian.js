@@ -35,15 +35,18 @@ class Accordian extends Component {
       <div className={accordianClasses}>
         <div className={css.header} onClick={handleHeaderClick}>
           <div className={css.headerInfo}>
-            <div className={titleClasses}>{data.title}</div>
+            <div className={titleClasses} dangerouslySetInnerHTML={{__html: data.title}}/>
             <div className={css.description} dangerouslySetInnerHTML={{__html: data.description}}/>
           </div>
           <div className={toggleClasses}/>
         </div>
         <div className={css.content}>
-          <div className={css.features}  dangerouslySetInnerHTML={{__html: data.content}}/>
+          <div className={css.info}>
+            <div className={css.feature}>{data.feature}</div>
+            <div className={css.features}  dangerouslySetInnerHTML={{__html: data.content}}/>
+          </div>
           <div className={css.media}>
-            {/* todo: add images */}
+            <img src={data.image} className={css.image}/>
           </div>
         </div>
       </div>

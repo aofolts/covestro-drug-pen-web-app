@@ -27,7 +27,7 @@ const data = {
       modelKey: 'ff3b3f61de784b84a297628436de5205'
     },
     {
-      title: 'Final Part Design',
+      title: 'Final Concept',
       color: 'orange',
       view: 'sketchfab',
       modelKey: '6ebf373b809f445f93398fc6348ee185'

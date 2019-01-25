@@ -25,6 +25,10 @@
   font-size: 2.2rem;
   margin-right: .padding[small];
   font-weight: 500;
+
+  sup {
+    font-size: .6em;
+  }
 }
 
 .blueTitle {
@@ -83,8 +87,13 @@
   align-items: flex-start;
 }
 
+.feature {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
 .features {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1.5em;
   margin-right: .padding[small];
 }
@@ -96,7 +105,17 @@
 }
 
 .media {
-  width: 30rem;
-  height: 15rem;
+  width: 35rem;
+  height: 20rem;
   background: grey;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
