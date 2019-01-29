@@ -17,7 +17,7 @@ const data = {
         <ul>
           <li>Toughness and durability</li>
           <li>Transparency for viewing windows, indicators and light guides</li>
-          <li>Biocompatibile (ISO 10993-1 and USP Class VI for 30 days or less)</li>
+          <li>Biocompatible (ISO 10993-1 and USP Class VI for 30 days or less)</li>
           <li>Sterilizable with a variety of methods (EtO, Steam, Gamma, e-beam)</li>
           <li>Low friction and glass-filled materials for internal mechanisms</li>
         </ul>
