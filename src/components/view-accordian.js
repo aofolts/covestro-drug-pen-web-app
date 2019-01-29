@@ -4,77 +4,87 @@ import css from 'less/view-accordian.module.less'
 import makrolonImage from 'images/makrolon.jpg'
 import bayBlendImage from 'images/bayblend.jpg'
 import markoblendImage from 'images/makroblend.jpg'
+import apecImage from 'images/apec.jpg'
 
 const data = {
   items: [
     {
-      title: 'Makrolon<sup>®</sup> Polycarbonate',
-      description: 'Medical Devices and equipment housings',
+      title: 'Makrolon<sup>®</sup>',
+      description: 'PC: Medical devices and equipment housings',
       color: 'pink',
       feature: `Best choice for glass-like transparency, impact resistance and durability`,
       content: `
-        <p>Best choice for glass-like transparency, impact resistance and durability</p>
-        <p>
-          Biocompatibile: ISO 10993-1 and USP Class VI for 30 days or less<br/>
-          Sterilizable with a variety of methods (EtO, Steam, Gamma, e-beam)<br/>
-          Transparency for viewing windows, indicators and light guides<br/>
-          Toughness and durability<br/>
-          Low friction and glass-filled materials for internal mechanisms
-        </p>
+        <ul>
+          <li>Toughness and durability</li>
+          <li>Transparency for viewing windows, indicators and light guides</li>
+          <li>Biocompatibile (ISO 10993-1 and USP Class VI for 30 days or less)</li>
+          <li>Sterilizable with a variety of methods (EtO, Steam, Gamma, e-beam)</li>
+          <li>Low friction and glass-filled materials for internal mechanisms</li>
+        </ul>
       `,
       image: makrolonImage
     },
     {
       title: 'Bayblend<sup>®</sup>',
-      description: 'Added design flexibility from balance mechanical and thermal properties',
+      description: 'PC + ABS: Drug delivery device housings, equipment housings',
       color: 'blue',
       feature: `Added design flexibility from balance mechanical and thermal properties`,
       content: `
+        <p>
+          <ul>
+            <li>Toughness needed for portable devices</li>
+            <li>Opaque, low gloss appearance</li>
+          </ul>
+        </p>
         <p>Options that are:</p>
         <p>
-          Biocompatible: ISO 10993-1 and USP Class VI for 30 days or less<br/>
-          Skin contact biocompatible: ISO 10993-5 and 10993-10<br/>
-          Flame retardant for equipment housings
-        </p>
-        <p>
-          Toughness needed for portable devices<br/>
-          Opaque, low gloss appearance
+          <ul>
+            <li>Biocompatible (ISO 10993-1 and USP Class VI for 30 days or less)</li>
+            <li>Skin contact biocompatible (ISO 10993-5 and 10993-10)</li>
+            <li>Flame retardant for equipment housings</li>
+          </ul>
         </p>
       `,
       image: bayBlendImage
     },
     {
       title: 'Makroblend<sup>®</sup>',
-      description: 'PC: Device Housings, internal mechanical components',
+      description: 'PC + Polyester: Wearable drug delivery housings, durable monitors and pumps',
       color: 'green',
       feature: `Ultra-tough and resistant to chemicals`,
       content: `
+        <p>
+          <ul>
+            <li>Enhanced chemical resistance to a variety of disinfectants and every day lotions</li>
+            <li>Suitable for insert molding to incorporate parts for assembly</li>
+          </ul>
+        </p>
         <p>Options that are:</p>
         <p>
-          Skin contact biocompatible (ISO 10993-5 and 10993-10) for wearable devices<br/>
-          Flame retardant for equipment housings
-        </p>
-        <p>
-          Enhanced chemical resistance to a variety of disinfectants and every day lotions<br/>
-          Suitable for insert molding to incorporate parts for assembly
+          <ul>
+            <li>Skin contact biocompatible (ISO 10993-5 and 10993-10) for wearable devices</li>
+            <li>Flame retardant for equipment housings</li>
+          </ul>
         </p>
       `,
       image: markoblendImage
     },
     {
       title: 'Apec<sup>®</sup>',
-      description: 'Components, trays and surgical kits that require repeat sterilization',
+      description: 'HT-PC: Components, trays, and surgical kits that require repeat sterilization',
       color: 'orange',
       feature: `Best choice for high-heat and clarity`,
       content: `
         <p>
-          Biocompatibility: ISO 10993-1 and USP Class VI for 30 days or less <br/>
-          Suitable for repeated steam sterilization up to 143°C<br/>
-          Outstanding clarity<br/>
-          Able to withstand higher processing temperatures during LSR overmolding to reduce curing times
+          <ul>
+            <li>Outstanding clarity</li>
+            <li>Suitable for repeated steam sterilization up to 143°C</li>
+            <li>Biocompatibility (ISO 10993-1 and USP Class VI for 30 days or less)</li>
+            <li>Able to withstand higher processing temperatures during LSR overmolding to reduce curing times</li>
+          </ul>
         </p>
       `,
-      image: markoblendImage
+      image: apecImage
     }
   ]
 }
@@ -107,7 +117,7 @@ class AccordianView extends React.Component {
     return (
       <div className={css.view}>
         <header className={css.header}>
-          <h1 className={css.headerTitle}>Covestro Materials</h1>
+          <h1 className={css.headerTitle}>Covestro Materials for the Healthcare industry</h1>
           <div className={css.exit} onClick={handleExitClick}/>
         </header>
         <div className={css.accordians}>
