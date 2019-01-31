@@ -81,9 +81,11 @@ class Index extends React.Component {
 
     return (
       <div className={css.views}>
-        <div className={css.page} style={{display: view === 'home' ? 'flex' : 'none'}}>
-          <Video context={context}/>
-          <Nav {...context}/>
+        <div style={{display: view === 'home' ? 'block' : 'none'}}>
+          <div className={css.page}>
+            <Video context={context}/>
+            <Nav {...context}/>
+          </div>
         </div>
         <div style={{display: view === 'sketchfab' ? 'block' : 'none'}}>
           <SketchfabView {...context}/>
